@@ -8,13 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		637338022BF5C47B007D8C8D /* Coffee_Shop_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637338012BF5C47B007D8C8D /* Coffee_Shop_SwiftUIApp.swift */; };
-		637338042BF5C47B007D8C8D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637338032BF5C47B007D8C8D /* ContentView.swift */; };
+		637338042BF5C47B007D8C8D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637338032BF5C47B007D8C8D /* HomeView.swift */; };
 		637338062BF5C47B007D8C8D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637338052BF5C47B007D8C8D /* Item.swift */; };
 		637338082BF5C47C007D8C8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 637338072BF5C47C007D8C8D /* Assets.xcassets */; };
 		6373380C2BF5C47C007D8C8D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6373380B2BF5C47C007D8C8D /* Preview Assets.xcassets */; };
 		637338162BF5C47C007D8C8D /* Coffee_Shop_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637338152BF5C47C007D8C8D /* Coffee_Shop_SwiftUITests.swift */; };
 		637338202BF5C47C007D8C8D /* Coffee_Shop_SwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6373381F2BF5C47C007D8C8D /* Coffee_Shop_SwiftUIUITests.swift */; };
 		637338222BF5C47C007D8C8D /* Coffee_Shop_SwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637338212BF5C47C007D8C8D /* Coffee_Shop_SwiftUIUITestsLaunchTests.swift */; };
+		6373382F2BF5CC49007D8C8D /* AppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6373382E2BF5CC49007D8C8D /* AppTabView.swift */; };
+		637338312BF5CD56007D8C8D /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637338302BF5CD56007D8C8D /* BasketView.swift */; };
+		637338332BF5CD63007D8C8D /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637338322BF5CD63007D8C8D /* AccountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,7 @@
 /* Begin PBXFileReference section */
 		637337FE2BF5C47B007D8C8D /* Coffee Shop SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffee Shop SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		637338012BF5C47B007D8C8D /* Coffee_Shop_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee_Shop_SwiftUIApp.swift; sourceTree = "<group>"; };
-		637338032BF5C47B007D8C8D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		637338032BF5C47B007D8C8D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		637338052BF5C47B007D8C8D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		637338072BF5C47C007D8C8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		637338092BF5C47C007D8C8D /* Coffee_Shop_SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Coffee_Shop_SwiftUI.entitlements; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		6373381B2BF5C47C007D8C8D /* Coffee Shop SwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Coffee Shop SwiftUIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6373381F2BF5C47C007D8C8D /* Coffee_Shop_SwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee_Shop_SwiftUIUITests.swift; sourceTree = "<group>"; };
 		637338212BF5C47C007D8C8D /* Coffee_Shop_SwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee_Shop_SwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6373382E2BF5CC49007D8C8D /* AppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabView.swift; sourceTree = "<group>"; };
+		637338302BF5CD56007D8C8D /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
+		637338322BF5CD63007D8C8D /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +104,11 @@
 			isa = PBXGroup;
 			children = (
 				637338012BF5C47B007D8C8D /* Coffee_Shop_SwiftUIApp.swift */,
-				637338032BF5C47B007D8C8D /* ContentView.swift */,
+				637338032BF5C47B007D8C8D /* HomeView.swift */,
 				637338052BF5C47B007D8C8D /* Item.swift */,
+				6373382E2BF5CC49007D8C8D /* AppTabView.swift */,
+				637338322BF5CD63007D8C8D /* AccountView.swift */,
+				637338302BF5CD56007D8C8D /* BasketView.swift */,
 				637338072BF5C47C007D8C8D /* Assets.xcassets */,
 				637338092BF5C47C007D8C8D /* Coffee_Shop_SwiftUI.entitlements */,
 				6373380A2BF5C47C007D8C8D /* Preview Content */,
@@ -262,8 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				637338042BF5C47B007D8C8D /* ContentView.swift in Sources */,
+				637338332BF5CD63007D8C8D /* AccountView.swift in Sources */,
+				637338312BF5CD56007D8C8D /* BasketView.swift in Sources */,
+				637338042BF5C47B007D8C8D /* HomeView.swift in Sources */,
 				637338062BF5C47B007D8C8D /* Item.swift in Sources */,
+				6373382F2BF5CC49007D8C8D /* AppTabView.swift in Sources */,
 				637338022BF5C47B007D8C8D /* Coffee_Shop_SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
