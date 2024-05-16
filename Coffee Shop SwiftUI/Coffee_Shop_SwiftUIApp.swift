@@ -25,7 +25,7 @@ struct Coffee_Shop_SwiftUIApp: App {
 
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            AppTabView()
         }
         .modelContainer(sharedModelContainer)
     }
