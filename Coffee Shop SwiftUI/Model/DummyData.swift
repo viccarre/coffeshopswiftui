@@ -9,6 +9,9 @@ import Foundation
 
 struct DummyData {
     
+    static let basket = Basket(id: UUID().uuidString, items: [])
+    static let user = User(id: UUID().uuidString, name: "Victor", address: "Municipio Libre 88", mobile: "8661851713")
+    
 //    static let basket = Basket(id: UUID().uuidString, items: [])
 //    static let user = User(id: UUID().uuidString, name: "David", address: "123 North Avenue", mobile: "99887766")
 ////    gadost0, ulleo, MorningbirdPhoto, islandworks, dany_paranoid, priyampatel4
