@@ -9,7 +9,7 @@ import Foundation
 
 final class FirebaseRepository {
     
-    func fetchDrinks() async -> [Drink] {
+    func fetchDrinks() async throws-> [Drink] {
         DummyData.drinks
     }
     
