@@ -9,58 +9,47 @@ import SwiftUI
 import SwiftData
 
 struct HomeView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    
+    @StateObject private var viewModel = HomeViewModel()
+    @State private var isShowing = false
+    
+    var categories: [String: [Drink]] {
+        .init(
+            grouping: viewModel.drinks,
+            by: { $0.category.rawValue }
+        )
+    }
+    
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+        ZStack {
+            NavigationStack{
+                //List(viewModel.drinks) { drink in
+                //  Text(drink.name)
+                List(categories.keys.sorted(), id: \String.self) { key in
+                    Section {
+                        if let drinks = categories[key] {
+                            ForEach(drinks) { drink in
+                                Text(drink.name)
+                            }
+                        }
+                    } header: {
+                        Text(key)
+                            .font(.subheadline)
                     }
                 }
-                .onDelete(perform: deleteItems)
-            }
-#if os(macOS)
-            .navigationSplitViewColumnWidth(min: 180, ideal: 200)
-#endif
-            .toolbar {
-#if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
+                .navigationTitle("☕️ Home")
+                .task(viewModel.fetchDrinks)
+                /* this is the same way to call but the previos is more elegant
+                .task {
+                    viewModel.fetchDrinks()
                 }
-#endif
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+                */
             }
         }
     }
 }
 
+
 #Preview {
     HomeView()
-        .modelContainer(for: Item.self, inMemory: true)
 }
