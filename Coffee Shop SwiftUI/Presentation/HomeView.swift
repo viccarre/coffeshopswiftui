@@ -51,8 +51,9 @@ struct HomeView: View {
                     viewModel.fetchDrinks()
                 }
                 */
-                if isShowingDetail {
-                    Text("This is the detail view")
+                if viewModel.selectedDrink != nil && isShowingDetail {
+                    DrinkDetailView(drink: viewModel.selectedDrink!,
+                                    isShowingDetail: $isShowingDetail)
                 }
             }
         }
