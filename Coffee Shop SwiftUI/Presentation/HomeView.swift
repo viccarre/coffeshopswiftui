@@ -11,7 +11,7 @@ import SwiftData
 struct HomeView: View {
     
     @StateObject private var viewModel = HomeViewModel()
-    @State private var isShowing = false
+    @State private var isShowingDetail = false
     
     var categories: [String: [Drink]] {
         .init(
@@ -25,11 +25,15 @@ struct HomeView: View {
             NavigationStack{
                 //List(viewModel.drinks) { drink in
                 //  Text(drink.name)
-                List(categories.keys.sorted(), id: \String.self) { key in
+                List(categories.keys.sorted(), 
+                     id: \String.self) { key in
                     Section {
                         if let drinks = categories[key] {
                             ForEach(drinks) { drink in
-                                Text(drink.name)
+                                DrinkRow(drink) {
+                                    viewModel.selectDrink(drink: drink)
+                                    isShowingDetail = true
+                                }
                             }
                         }
                     } header: {
@@ -39,11 +43,17 @@ struct HomeView: View {
                 }
                 .navigationTitle("☕️ Home")
                 .task(viewModel.fetchDrinks)
+                .blur(radius: isShowingDetail ? 20 : 0)
+                .disabled(isShowingDetail)
                 /* this is the same way to call but the previos is more elegant
+                 for this the fetchDrinks() functions needs to be marked as sendable
                 .task {
                     viewModel.fetchDrinks()
                 }
                 */
+                if isShowingDetail {
+                    Text("This is the detail view")
+                }
             }
         }
     }

@@ -17,7 +17,7 @@ final class HomeViewModel: ObservableObject {
     @Published private(set) var drinks: [Drink] = []
     @Published private(set) var selectedDrink: Drink?
     
-    // @MainActor
+    @MainActor
     @Sendable func fetchDrinks() async {
         do {
             drinks = try await firebaseRepository.fetchDrinks()
