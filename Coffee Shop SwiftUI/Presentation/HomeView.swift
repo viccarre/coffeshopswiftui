@@ -51,10 +51,10 @@ struct HomeView: View {
                     viewModel.fetchDrinks()
                 }
                 */
-                if viewModel.selectedDrink != nil && isShowingDetail {
-                    DrinkDetailView(drink: viewModel.selectedDrink!,
-                                    isShowingDetail: $isShowingDetail)
-                }
+            }
+            if viewModel.selectedDrink != nil && isShowingDetail {
+                DrinkDetailView(drink: viewModel.selectedDrink!,
+                                isShowingDetail: $isShowingDetail)
             }
         }
     }

@@ -27,6 +27,7 @@
 		639A41C62BFC69D800B65736 /* FirebaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639A41C52BFC69D800B65736 /* FirebaseRepository.swift */; };
 		63B1667C2C5DF95900AB99B7 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 63B1667B2C5DF95900AB99B7 /* CachedAsyncImage */; };
 		63B1667E2C5DFD5500AB99B7 /* DrinkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B1667D2C5DFD5400AB99B7 /* DrinkDetailView.swift */; };
+		63EB725D2CBB71D9008ACB3C /* BasketViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EB725C2CBB71D9008ACB3C /* BasketViewModel.swift */; };
 		63F41F862C5DE80400AE9597 /* DrinkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F41F852C5DE80400AE9597 /* DrinkRow.swift */; };
 		63F41F8B2C5DF7EB00AE9597 /* RemoteImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F41F8A2C5DF7EB00AE9597 /* RemoteImageView.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		639A41C22BFC668B00B65736 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		639A41C52BFC69D800B65736 /* FirebaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseRepository.swift; sourceTree = "<group>"; };
 		63B1667D2C5DFD5400AB99B7 /* DrinkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailView.swift; sourceTree = "<group>"; };
+		63EB725C2CBB71D9008ACB3C /* BasketViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewModel.swift; sourceTree = "<group>"; };
 		63F41F852C5DE80400AE9597 /* DrinkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkRow.swift; sourceTree = "<group>"; };
 		63F41F8A2C5DF7EB00AE9597 /* RemoteImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				639A41C22BFC668B00B65736 /* HomeViewModel.swift */,
+				63EB725C2CBB71D9008ACB3C /* BasketViewModel.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -280,7 +283,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					637337FD2BF5C47B007D8C8D = {
 						CreatedOnToolsVersion = 15.4;
@@ -350,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				637338392BF5D311007D8C8D /* DummyData.swift in Sources */,
+				63EB725D2CBB71D9008ACB3C /* BasketViewModel.swift in Sources */,
 				637338332BF5CD63007D8C8D /* AccountView.swift in Sources */,
 				637338312BF5CD56007D8C8D /* BasketView.swift in Sources */,
 				637338042BF5C47B007D8C8D /* HomeView.swift in Sources */,
@@ -435,6 +439,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -496,6 +501,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -523,6 +529,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Coffee Shop SwiftUI/Coffee_Shop_SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Coffee Shop SwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -559,6 +566,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Coffee Shop SwiftUI/Coffee_Shop_SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Coffee Shop SwiftUI/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -590,10 +598,10 @@
 		637338292BF5C47C007D8C8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
@@ -612,10 +620,10 @@
 		6373382A2BF5C47C007D8C8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
@@ -634,9 +642,9 @@
 		6373382C2BF5C47C007D8C8D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
@@ -655,9 +663,9 @@
 		6373382D2BF5C47C007D8C8D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MACOSX_DEPLOYMENT_TARGET = 14.4;

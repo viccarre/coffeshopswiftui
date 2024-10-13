@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DrinkDetailView: View {
+    @EnvironmentObject var order: BasketViewModel
     
     let drink: Drink
     @Binding var isShowingDetail: Bool
@@ -28,6 +29,7 @@ struct DrinkDetailView: View {
     private func addToBasketButton() -> some View {
         Button {
             //Add to Basket
+            order.add(drink: drink)
             isShowingDetail = false
         } label: {
             Text("\(drink.price, format: .currency(code: "EUR")) - Add to Basket")

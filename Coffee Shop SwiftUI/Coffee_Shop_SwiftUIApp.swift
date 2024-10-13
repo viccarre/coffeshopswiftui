@@ -26,6 +26,7 @@ struct Coffee_Shop_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             AppTabView()
+                .environmentObject(BasketViewModel())
         }
         .modelContainer(sharedModelContainer)
     }
